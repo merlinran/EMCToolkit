@@ -1,0 +1,66 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @call.call %></h1>
+    <a href="<%= url_for :action => :show, :id => @call.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @call.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @call.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="call[call]" class="fieldLabel">Call</label>
+            <input type="text" id="call[call]" name="call[call]" value="<%= @call.call %>" <%= placeholder( "Call" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[task]" class="fieldLabel">Task</label>
+            <input type="text" id="call[task]" name="call[task]" value="<%= @call.task %>" <%= placeholder( "Task" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[unisys_ia]" class="fieldLabel">Unisys ia</label>
+            <input type="text" id="call[unisys_ia]" name="call[unisys_ia]" value="<%= @call.unisys_ia %>" <%= placeholder( "Unisys ia" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[emc_site_id]" class="fieldLabel">Emc site</label>
+            <input type="text" id="call[emc_site_id]" name="call[emc_site_id]" value="<%= @call.emc_site_id %>" <%= placeholder( "Emc site" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[site_name]" class="fieldLabel">Site name</label>
+            <input type="text" id="call[site_name]" name="call[site_name]" value="<%= @call.site_name %>" <%= placeholder( "Site name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[box_model]" class="fieldLabel">Box model</label>
+            <input type="text" id="call[box_model]" name="call[box_model]" value="<%= @call.box_model %>" <%= placeholder( "Box model" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[box_sn]" class="fieldLabel">Box sn</label>
+            <input type="text" id="call[box_sn]" name="call[box_sn]" value="<%= @call.box_sn %>" <%= placeholder( "Box sn" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[emc_notes]" class="fieldLabel">Emc notes</label>
+            <input type="text" id="call[emc_notes]" name="call[emc_notes]" value="<%= @call.emc_notes %>" <%= placeholder( "Emc notes" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="call[full_notes]" class="fieldLabel">Full notes</label>
+            <input type="text" id="call[full_notes]" name="call[full_notes]" value="<%= @call.full_notes %>" <%= placeholder( "Full notes" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,64 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @call.call %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @call.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Call</div>
+            <div class="itemValue"><%= @call.call %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Task</div>
+            <div class="itemValue"><%= @call.task %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">UnisysIa</div>
+            <div class="itemValue"><%= @call.unisys_ia %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EmcSiteId</div>
+            <div class="itemValue"><%= @call.emc_site_id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SiteName</div>
+            <div class="itemValue"><%= @call.site_name %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">BoxModel</div>
+            <div class="itemValue"><%= @call.box_model %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">BoxSn</div>
+            <div class="itemValue"><%= @call.box_sn %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">EmcNotes</div>
+            <div class="itemValue"><%= @call.emc_notes %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">FullNotes</div>
+            <div class="itemValue"><%= @call.full_notes %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

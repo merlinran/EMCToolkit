@@ -1,0 +1,19 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>EMC Toolkit</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <label class="fieldLabel">Paste short message here</label>
+      <textarea name="msg" row="20" col="40">
+      </textarea>
+      <input type="submit" value="CHATT"/>
+    </form>
+    <a href="<%= url_for :action => :index %>" class="regularButton" data-icon="star">
+      LIST
+    </a>
+  </div>
+
+</div>

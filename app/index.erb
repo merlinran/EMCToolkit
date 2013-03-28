@@ -1,0 +1,16 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>EMC Toolkits</h1>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :controller => :Call, :action => :create %>">
+      <input type="hidden" name="id" value="<%= Call.new.object %>"/>
+	<textarea>
+		Paste message dispatched to you here...
+	<textarea>
+	<a href="<%= url_for :controller => :Call, :action => "new" %>", class="ui_btn"> CHATT </a>
+      <input type="submit" value="CHATT"/>
+    </form>
+  </div>
+
+</div>
